@@ -29,11 +29,14 @@ function yVal = numDiff(funct,xVal,algorithm)
 
 switch algorithm
     case 'forward'
-        yVal = (funct(xVal) - funct(xVal - 1e-8)) / 1e-8;
+        hForwDiff = 1e-8;
+        yVal = (funct(xVal) - funct(xVal - hForwDiff)) / hForwDiff;
     case 'central'
-        yVal = (funct(xVal + 1e-6) - funct(xVal - 1e-6)) / (2*1e-6);
+        hCentrDiff = 1e-6;
+        yVal = (funct(xVal + hCentrDiff) - funct(xVal - hCentrDiff)) / (2*hCentrDiff);
     case 'backward'
-        yVal = (funct(xVal + 1e-8) - funct(xVal)) / 1e-8;
+        hBackDiff = 1e-8;
+        yVal = (funct(xVal + hBackDiff) - funct(xVal)) / hBackDiff;
     otherwise
         error("Error: No algorithm could be chosen. Try again");
 end

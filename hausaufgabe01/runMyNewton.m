@@ -16,6 +16,6 @@
 
 %------------- BEGIN CODE --------------
 
-[xZero, abortFlag, iters] = myNewton('function', @myPoly, 'startValue', 1, 'livePlot', 'on');
+[xZero, abortFlag, iters] = myNewton('function', @myPoly, 'startValue', 5, 'livePlot', 'on');
 
 %------------- END OF CODE --------------
