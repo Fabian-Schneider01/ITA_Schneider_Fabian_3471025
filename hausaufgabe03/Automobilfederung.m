@@ -95,7 +95,7 @@ classdef Automobilfederung < handle
                 if strcmp(varargin{i},'y0')
                    y = varargin{i+1}(:);
                 elseif strcmp(varargin{i},'stepsize')
-                  h = varargin{i+1};
+                   h = varargin{i+1};
                 elseif strcmp(varargin{i},'t0') 
                    t = varargin{i+1};
                 elseif strcmp(varargin{i},'tfinal')
